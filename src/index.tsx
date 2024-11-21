@@ -1,4 +1,4 @@
-// WORKS:
+// 1- WORKS:
 
 // import { Column, TableHeader, type TableHeaderProps } from "react-aria-components";
 
@@ -14,19 +14,36 @@
 //     )
 // }
 
-// DOESN'T WORKS:
+// 2- WORKS:
 
-import { THead as OrbiterTableHeader, as } from "@workleap/orbiter-ui";
-import type { ComponentProps } from "react";
-import { TableHeader as ReactAriaTableHeader } from "react-aria-components";
+// import type { ComponentProps } from "react";
+// import { Column, TableHeader, type TableHeaderProps } from "react-aria-components";
 
-/** This component is a wrapper to allow the use of CSS in JS on React Aria's component */
-const InnerTableHeader = as(OrbiterTableHeader, ReactAriaTableHeader);
+// export interface MyTableHeaderProps extends ComponentProps<typeof TableHeader> {
+//     foo: string;
+// }
 
-export type TableHeaderProps = ComponentProps<typeof InnerTableHeader>;
+// export function MyTableHeader({ foo, ...props }: MyTableHeaderProps) {
+//     return (
+//         <TableHeader {...props}>
+//             <Column>{foo}</Column>
+//         </TableHeader>
+//     )
+// }
 
-export const TableHeader = ({ children, ...rest }: TableHeaderProps) => (
-    <InnerTableHeader textAlign="left" height="3rem" {...rest}>
-        {children}
-    </InnerTableHeader>
-);
+// 3- DOESN'T WORKS:
+
+// import { THead as OrbiterTableHeader, as } from "@workleap/orbiter-ui";
+// import type { ComponentProps } from "react";
+// import { TableHeader as ReactAriaTableHeader } from "react-aria-components";
+
+// /** This component is a wrapper to allow the use of CSS in JS on React Aria's component */
+// const InnerTableHeader = as(OrbiterTableHeader, ReactAriaTableHeader);
+
+// export type TableHeaderProps = ComponentProps<typeof InnerTableHeader>;
+
+// export const TableHeader = ({ children, ...rest }: TableHeaderProps) => (
+//     <InnerTableHeader textAlign="left" height="3rem" {...rest}>
+//         {children}
+//     </InnerTableHeader>
+// );
