@@ -1,0 +1,29 @@
+{
+    "name": "react-table-header-interface-issue",
+    "version": "0.0.0",
+    "description": "Reproduction showcasing RAC table header interface issue",
+    "license": "Apache-2.0",
+    "type": "module",
+    "scripts": {
+        "build": "tsup",
+        "clean": "pnpm exec pnpm dlx rimraf dist node_modules/.cache",
+        "reset": "pnpm clean && pnpm dlx rimraf node_modules pnpm-lock.yaml",
+        "list-outdated-deps": "pnpm outdated --format list",
+        "update-outdated-deps": "pnpm update --latest"
+    },
+    "dependencies": {
+        "react": "18.3.1",
+        "react-dom": "18.3.1",
+        "react-aria-components": "1.4.1"
+    },
+    "devDependencies": {
+        "@types/react": "18.3.12",
+        "@types/react-dom": "18.3.1",
+        "@workleap/orbiter-ui": "5.6.2",
+        "@workleap/tsup-configs": "3.0.6",
+        "@workleap/typescript-configs": "3.0.2",
+        "tsup": "8.3.0",
+        "typescript": "5.6.3"
+    },
+    "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903"
+}
