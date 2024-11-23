@@ -34,3 +34,7 @@ This result in an error when a consumer lib extending the `TableHeaderProps` int
 
 - `pnpm install`
 - `pnpm build`
+
+## Conclusion
+
+The error is due to [Orbiter](https://github.com/gsoft-inc/wl-orbiter) `as` function. This is not an issue with RAC.
